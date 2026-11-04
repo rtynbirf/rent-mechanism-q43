@@ -1,0 +1,142 @@
+{
+ "package": "R49-INTEGRATION",
+ "date": "2026-11-05",
+ "scope": "консолидация машинных прогонов R11..R48 в единый реестр; ядро Q43 v2",
+ "machine_runs": [
+  {
+   "run": "R42",
+   "artifact": "r42_results.json",
+   "verdict": "PASS",
+   "checks": "0/5",
+   "note": ""
+  },
+  {
+   "run": "R43",
+   "artifact": "r43_results.json",
+   "verdict": "PASS",
+   "checks": "audit=0 позиций; emergence=EMERGENCE CONFIRMED (structural-operative)",
+   "note": ""
+  },
+  {
+   "run": "R44-f",
+   "artifact": "r44f_results.json",
+   "verdict": "PATCHED (I_K″)",
+   "checks": "T1 per_cycle=False lifetime=True; T2 dies_wo_donor=True; T3 distinct=True; T4 rent0_chain=True",
+   "note": ""
+  },
+  {
+   "run": "R46-e",
+   "artifact": "r46e_results.json",
+   "verdict": "M1=PASS M2=PASS M3=PASS",
+   "checks": "FR6 regime dV=-0.89 vs dF=-0.274; recurring dV=-0.14 vs dF=2.35; donors D0<D4<D2<D1; MIN-SET 11/11 выживших с K1+K2",
+   "note": ""
+  },
+  {
+   "run": "R47-c/R48",
+   "artifact": "r48_results.json",
+   "verdict": "PASS",
+   "checks": "GRAY MIRROR 5/5",
+   "note": ""
+  },
+  {
+   "run": "R20",
+   "artifact": "r20_results.json",
+   "verdict": "?",
+   "checks": "legacy-run",
+   "note": ""
+  },
+  {
+   "run": "R32",
+   "artifact": "r32_results.json",
+   "verdict": "?",
+   "checks": "legacy-run",
+   "note": ""
+  },
+  {
+   "run": "R33",
+   "artifact": "r33_results.json",
+   "verdict": "?",
+   "checks": "legacy-run",
+   "note": ""
+  }
+ ],
+ "cross_checks": {
+  "X1_MINSET_gray_mirror": {
+   "claim": "MIN-SET {K1,K2} и «нет капа → нет цены нигде» согласованы",
+   "ok": true
+  },
+  "X2_nomenklatura_grey": {
+   "claim": "K3/K4 диагностические: рента живёт без легальной цены места; цена в тени (≈14.9 лет дохода)",
+   "ok": true
+  },
+  "X3_FR6_amplitudes": {
+   "claim": "ΔV_NYC ∈ [-0.946, -0.89] против F ≈ [-0.5, -0.4]; recurring MDB: |ΔV|=0.14 < |ΔF|=2.35; метрический конфликт дна решён (r47d)",
+   "ok": true,
+   "dV_union": [
+    -0.946,
+    -0.92,
+    -0.89
+   ]
+  },
+  "X4_donor_law": {
+   "claim": "Цена спасения: D0=$0 (правило) < D4=$350M (кредитор) < D2=>$471M (налогоплательщик) < D1=$2.9B (резервы=терминально); класс меняется только через D2/D3",
+   "ok": true
+  },
+  "X5_invariant_IK2": {
+   "claim": "I_K″: per-cycle опровергнут, lifetime держится; K={K_f,K_w,K_s,K_t} с попарно различными отказами; вход ∈ {R_t, резервы, донор}",
+   "ok": true
+  },
+  "X6_parasitism": {
+   "claim": "Класс определяется типом капа (ресурсный→мутуализм/дренаж; лицензионный→дренаж+ФЛИП); НЕКРО пуст",
+   "ok": true
+  }
+ },
+ "integrity_fails": [],
+ "unknown_registry": {
+  "total_unique": 22,
+  "structurally_blocked": [
+   "ряды цен квот НЗ/Исландия — 3 попытки (r46b, r46d, r47b), структурно заблокированы в песочнице; playbook в r47b",
+   "слоты 2009–10: поправка атрибуции — $52.3M/пара = LHR 2008, не LGA; ряды CAA/FAA вне песочницы",
+   "даладала K3/K4: Transit-Center 404, S2 429 — источник недоступен",
+   "жёлтые поездки 2019 точно (factbook 404×3); оценка 95–105M LOW; F-амплитуда 2014→2018–19 ≈ −40…50%",
+   "AU water: credit-collateralization of entitlements (K4/K_f arm) unverified (ACCC 403) - r44e"
+  ],
+  "methodologically_closed": [
+   "MDB: -95% spot trough is a r44e ko6 PLACEHOLDER anchored to headlines; no verified annual spot-price series locally (r44e ko6 note)",
+   "NYC: federal ARPA share of MRP funding; 2018-22 bankruptcy year breakdown; NCUA portfolio-sale sums/discounts; public default-rate report (does not exist per Task Force); Melrose conservatorship month (Jan 2017, by memory)",
+   "De Beers 2019 stockpile ~$2.5B not confirmed (r45)"
+  ],
+  "open": [
+   "слоты 9/11–2004: цены сделок не документированы (waiver документирован, P-амплитуда UNKNOWN)",
+   "джитни: цена лицензии после удушения — не возникла/не документирована (отрасль схлопнулась до капитализации)",
+   "LHR slots: collateralization undocumented in files (capitalization confirmed by trades only)",
+   "NYC trough metric conflict: ~$110k (r44b, 2021 median arm's-length, TLCXLS) vs ~$80k (r44c s5, TLC transfers 09.2021) - both local, different methodology; M1 used the task-calibrated $110k",
+   "NYC: recovery share of yellow trips vs 2019 base (~96M) unverified (r44b)",
+   "Iceland ITQ: quota price series ISK/kg; lease rates; quota collateral; fiskveiðigjald 2012 parameters; price-vs-lease dynamics 2008-12/2020 (r44b)",
+   "Iceland cod SSB numbers; Dublin 2000 deregulation numbers (r44d i-4/iv-2)",
+   "NZ QMS: quota collateral (K4) - no data (r44d)",
+   "RF-1995, NJ wine licences, HK taxi: element vectors absent from provided files (names only, r44e docstring)",
+   "Dala dala / racket: K3 (alienability) and K4 (capitalization) not described (r44a)",
+   "USSR grey quasi-price of appointments (blat) unverified (r44a C1)",
+   "Negative controls: US jitney 1914-20 free entry; Zimbabwe fast-track farm-value collapse; K5-activation discount empirics (r44a)",
+   "Kryshtanovskaya-White exact 1996 continuity figure (r45: ~60% belongs to the Putin-elites paper)",
+   "Slots: EU/UK waiver chronology by dates (r45)"
+  ]
+ },
+ "core_v2_final": {
+  "state": "Q43=(S,Ah,X,F,B,C,N,G,W,P,M,I)",
+  "phi": "Φ42(Q_t; R_t,N_t,G_t,W_t); V_t=ΣE[R_s|shock-model]/(1+r)^s × Prob(survival)",
+  "minset": "{K1,K2} строго необходимы (гос. или частная форма); G* функционален; W_lat латентная опция; K3/K4 диагностические",
+  "channels": "K={K_f,K_w,K_s,K_t}; вход воспроизводства ∈ {R_t, резервы, внешний донор}",
+  "laws": [
+   "L1 СЕРОЕ ЗЕРКАЛО: при K1∧K2∧R>0 цена места существует в каком-то режиме (легальном или теневом); без K1 цены нет нигде",
+   "L2 ЗАКОН ДОНОРОВ: цена спасения D0<$350M(D4)<≥$471M(D2)<$2.9B(D1=терминально); класс меняется только D2/D3",
+   "L3 ПАРАЗИТАРНОСТЬ: класс определяет ТИП КАПА (ресурсный→мутуализм/дренаж; лицензионный→дренаж+ФЛИП); НЕКРО пуст",
+   "L4 FR6-УСЛОВНЫЙ: |ΔP|>|ΔF| только при режимных шоках; повторяющиеся запрайсены (NYC 0.89-0.95 vs 0.4-0.5; MDB 0.14 vs 2.35)",
+   "L5 ДИСКОНТ W_lat: дисконт ≈ p·(1−c)·V (ЮКОС −36…−69%; Зимбабве c≈0→исчезновение рынка; США c≈1→пренебрежим)",
+   "L6 FLIP-ПАРА: NYC (слой против заместителя при шоке) ↔ Дублин-2000 (снятие слоя до шока → рассеяние через вход, парк ×4.3)"
+  ],
+  "invariant": "I_K″: ∃Q,∃t*: R_{t*}>0 ∧ Q_{t+1}=Φ42(Q_t;K_f,K_w,K_s,K_t) ∧ вход K∈{R_t,резервы,донор} ∧ множество носителей замкнуто ∧ выживание без R_t только через резервы/донора"
+ },
+ "verdict": "INTEGRATED"
+}

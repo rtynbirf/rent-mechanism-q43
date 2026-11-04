@@ -1,0 +1,161 @@
+{
+ "T1": {
+  "Y": 100.0,
+  "counterfactuals": {
+   "competitive_benchmark (цена свободной конкуренции)": 80.0,
+   "next_best_use (лучшая альтернативная база)": 60.0,
+   "reservation_alternative (альтернатива держателя)": 95.0,
+   "historical_baseline (исторический уровень)": 70.0,
+   "market_value_anchor (якорь капитализированной цены)": 100.0
+  },
+  "R_measured": {
+   "competitive_benchmark (цена свободной конкуренции)": 20.0,
+   "next_best_use (лучшая альтернативная база)": 40.0,
+   "reservation_alternative (альтернатива держателя)": 5.0,
+   "historical_baseline (исторический уровень)": 30.0,
+   "market_value_anchor (якорь капитализированной цены)": 0.0
+  },
+  "R_min": 0.0,
+  "R_max": 40.0,
+  "factor_disagreement": 40000000000000.0
+ },
+ "T2": {
+  "params": {
+   "r": 0.07,
+   "Y": 100.0,
+   "N_true": 30.0,
+   "R_true": 70.0,
+   "K_repro": 428.57,
+   "A_star_theory": 1428.57
+  },
+  "identity_check": {
+   "R_with_repro_anchor": 70.0,
+   "equals_R_true": true,
+   "R_with_market_anchor_static": 30.0,
+   "equals_N_true": true
+  },
+  "dynamic_path_head": [
+   {
+    "t": 0,
+    "A": 428.57,
+    "rA": 30.0,
+    "R_measured": 70.0
+   },
+   {
+    "t": 1,
+    "A": 498.57,
+    "rA": 34.9,
+    "R_measured": 65.1
+   },
+   {
+    "t": 2,
+    "A": 563.67,
+    "rA": 39.46,
+    "R_measured": 60.543
+   }
+  ],
+  "dynamic_path_tail": [
+   {
+    "t": 57,
+    "A": 1412.59,
+    "rA": 98.88,
+    "R_measured": 1.1185
+   },
+   {
+    "t": 58,
+    "A": 1413.71,
+    "rA": 98.96,
+    "R_measured": 1.0402
+   },
+   {
+    "t": 59,
+    "A": 1414.75,
+    "rA": 99.03,
+    "R_measured": 0.9674
+   }
+  ],
+  "measured_rent_vanishes": true,
+  "extraction_unchanged": true,
+  "complementary_split": "якорь воспроизводства даёт (R,N)=(70,30); рыночный якорь после капитализации даёт (0,100)"
+ },
+ "T3": {
+  "carrier": {
+   "Y": 100.0,
+   "N_true": 30.0,
+   "R_true": 70.0
+  },
+  "normal_profit_30": {
+   "X": 30.0,
+   "X<=R_true": true,
+   "digs_into_N": false,
+   "verdict_by_structure_only": "C holds: изъятие покрывается излишком"
+  },
+  "tax_25": {
+   "X": 25.0,
+   "X<=R_true": true,
+   "digs_into_N": false,
+   "verdict_by_structure_only": "C holds: изъятие покрывается излишком"
+  },
+  "tax_90": {
+   "X": 90.0,
+   "X<=R_true": false,
+   "digs_into_N": true,
+   "verdict_by_structure_only": "C FAILS: изъятие проедает нормальную отдачу -> деградация носителя (R15-B/C)"
+  },
+  "observation": "структура различает лишь СОВМЕСТИМОСТЬ ИЗЪЯТИЯ С ПРОДОЛЖЕНИЕМ (X vs R_true); налог 25 и рента 25 структурно НЕРАЗЛИМИМЫ — различие лежит в свойствах F (compulsory/unrequited vs claim), вне ядра"
+ },
+ "T4": {
+  "Y": 100.0,
+  "avoidable_cost": 40.0,
+  "full_cost": 90.0,
+  "R_short_margin": 60.0,
+  "R_long_margin": 10.0,
+  "ratio": 6.0,
+  "meaning": "один и тот же поток даёт ренту 60 или 10 в зависимости от глубины маржи; критерий без правила выбора маржи конфундирует квази-ренту со scarcity-рентой"
+ },
+ "T5": {
+  "n_star_free_entry": 15.0,
+  "open_entry_tail": [
+   {
+    "t": 197,
+    "n": 14.992,
+    "y": 50.08,
+    "profit": 0.0767
+   },
+   {
+    "t": 198,
+    "n": 15.069,
+    "y": 49.31,
+    "profit": -0.6901
+   },
+   {
+    "t": 199,
+    "n": 15.019,
+    "y": 49.81,
+    "profit": -0.1901
+   }
+  ],
+  "license_tail": [
+   {
+    "t": 197,
+    "n": 8.0,
+    "y": 120.0,
+    "profit": 70.0
+   },
+   {
+    "t": 198,
+    "n": 8.0,
+    "y": 120.0,
+    "profit": 70.0
+   },
+   {
+    "t": 199,
+    "n": 8.0,
+    "y": 120.0,
+    "profit": 70.0
+   }
+  ],
+  "prediction": "R>0 <=> вход заблокирован; при свободном входе R->0 (сходится с R11-A: Гордон, рассеяние)",
+  "anchor_rule": "Y^cf = отдача на марже свободного входа/воспроизводства носителя"
+ }
+}

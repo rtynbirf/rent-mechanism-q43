@@ -1,0 +1,364 @@
+{
+ "rows": [
+  {
+   "id": "A1",
+   "claim": "R11-A открытый доступ: рента ≈ 0",
+   "expected": "≈0 (|r|<1e-3)",
+   "actual": "≈0 (|r|<1e-3)",
+   "source": "r11_results.json:R11_A.open_access",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A2",
+   "claim": "R11-A биомасса X_be = c/(pq) = 25.0",
+   "expected": 25.0,
+   "actual": 25.0,
+   "source": "r11_results.json:R11_A.open_access",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A3",
+   "claim": "R11-A контролируемый доступ: рента 56.0",
+   "expected": 56.0,
+   "actual": 56.0,
+   "source": "r11_results.json:R11_A.controlled",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A4",
+   "claim": "R11-A накопленный захват 363×",
+   "expected": "363.4x",
+   "actual": "363.4x",
+   "source": "r11_results.json:R11_A.verdict_data",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A5",
+   "claim": "R11-B: 11 периодов R=0 при P=1, F=0 ровно",
+   "expected": 11,
+   "actual": 11,
+   "source": "r11_results.json:R11_B",
+   "verdict": "MATCH",
+   "note": "max_F_when_R_zero = 0.0"
+  },
+  {
+   "id": "A6",
+   "claim": "R11-B таблица истинности F=P·R",
+   "expected": true,
+   "actual": true,
+   "source": "r11_results.json:R11_B.truth_table",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A7",
+   "claim": "R11-D порог R0* = δ/α = 0.375",
+   "expected": 0.375,
+   "actual": 0.375,
+   "source": "r11_results.json:R11_D",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A8",
+   "claim": "R11-D мёртвый режим P→0.003",
+   "expected": "0.003",
+   "actual": "0.0033",
+   "source": "r11_results.json:R11_D (0.0033)",
+   "verdict": "MISMATCH",
+   "note": ""
+  },
+  {
+   "id": "A9",
+   "claim": "R11-D живой режим P→1.0",
+   "expected": 1.0,
+   "actual": 1.0,
+   "source": "r11_results.json:R11_D",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A10",
+   "claim": "R11-E no-maintenance: 0.88^25 → 0.0409",
+   "expected": 0.0409,
+   "actual": 0.0409,
+   "source": "r11_results.json:R11_E (пересчёт)",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "A11",
+   "claim": "R11-E dormant: F=0 в крах, поток возобновляется полностью",
+   "expected": true,
+   "actual": true,
+   "source": "r11_results.json:R11_E",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "claim": "R20-T1: R∈[0,40] при Y=100, 5 контрфактов",
+   "expected": [
+    100.0,
+    0.0,
+    40.0
+   ],
+   "actual": [
+    100.0,
+    0.0,
+    40.0
+   ],
+   "source": "r20_results.json:T1",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "B2",
+   "claim": "R20-T2: рента затухает 70 → 0.97 при Y=100",
+   "expected": "0.97",
+   "actual": "0.9674",
+   "source": "r20_results.json:T2.tail (0.9674)",
+   "verdict": "MISMATCH",
+   "note": ""
+  },
+  {
+   "id": "B3",
+   "claim": "R20-T2: A* = Y/r = 1428.57",
+   "expected": 1428.57,
+   "actual": 1428.57,
+   "source": "r20_results.json:T2 (пересчёт)",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "B4",
+   "claim": "R20-T2: якорь воспроизводства R=70=R_true; рыночный R=30=N_true",
+   "expected": [
+    70.0,
+    true,
+    30.0,
+    true
+   ],
+   "actual": [
+    70.0,
+    true,
+    30.0,
+    true
+   ],
+   "source": "r20_results.json:T2.identity_check",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "claim": "R20-T3: налог 25 ≡ рента 25 структурно; tax90 FAIL (проедает N)",
+   "expected": true,
+   "actual": true,
+   "source": "r20_results.json:T3",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "claim": "R20-T4: маржи 60 vs 10 (6:1)",
+   "expected": 6.0,
+   "actual": 6.0,
+   "source": "r20_results.json:T4",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "B7",
+   "claim": "R20-T5: n*=15; лицензия n=8 → profit=70 устойчиво",
+   "expected": [
+    15.0,
+    70.0
+   ],
+   "actual": [
+    15.0,
+    70.0
+   ],
+   "source": "r20_results.json:T5",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "C1",
+   "claim": "R32: 6/6 проверок PASS",
+   "expected": true,
+   "actual": true,
+   "source": "r32_results.json:passed",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "C2",
+   "claim": "R32-C3: V 291.6 → 32.4 (11%)",
+   "expected": [
+    291.6,
+    32.4,
+    "11%"
+   ],
+   "actual": [
+    291.6,
+    32.4,
+    "11%"
+   ],
+   "source": "пересчёт закрытой формы B=SCALE·E·C·S",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "C3",
+   "claim": "R32-C4: net = 4.05−10 = −5.95",
+   "expected": -5.95,
+   "actual": -5.95,
+   "source": "пересчёт закрытой формы",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "C4",
+   "claim": "R32-C5: net 62.9/поколение, кумулятив 503.2",
+   "expected": [
+    62.9,
+    503.2
+   ],
+   "actual": [
+    62.9,
+    503.2
+   ],
+   "source": "пересчёт закрытой формы",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "D1",
+   "claim": "R25: PV аннуитета R=100, i=10%, T=10 → 614.46",
+   "expected": 614.46,
+   "actual": 614.46,
+   "source": "пересчёт",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "D2",
+   "claim": "R25: перпетуитет R/i = 1000",
+   "expected": 1000.0,
+   "actual": 1000.0,
+   "source": "пересчёт",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "D3",
+   "claim": "Квадранты 13+39+612+3+357 = 1024",
+   "expected": 1024,
+   "actual": 1024,
+   "source": "пересчёт",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "D4",
+   "claim": "R31 контрпример: 100−20−50 = 30",
+   "expected": 30,
+   "actual": 30,
+   "source": "пересчёт (B=100, Cost=20, Y^cf=50)",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "E1",
+   "claim": "Вето 63/64 присутствует в корпусе",
+   "expected": true,
+   "actual": true,
+   "source": "V6.0 corpus",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "E2",
+   "claim": "FSM 19 состояний / 4 терминала / 25 рёбер",
+   "expected": true,
+   "actual": true,
+   "source": "V6.0 corpus",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "E3",
+   "claim": "P7 опровергнут/переформулирован на карте v2.0",
+   "expected": true,
+   "actual": true,
+   "source": "V6.0 corpus",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "E4",
+   "claim": "Квадранты 13|39|612|3|357 в корпусе",
+   "expected": true,
+   "actual": true,
+   "source": "V6.0 corpus",
+   "verdict": "MATCH",
+   "note": ""
+  },
+  {
+   "id": "F1",
+   "claim": "V7.0: «Налог = рента ❌ ОПРОВЕРГНУТО (R20, структура)»",
+   "expected": "вердикт R20-T3",
+   "actual": "DRIFT",
+   "source": "r20_results.json:T3.observation",
+   "verdict": "DRIFT",
+   "note": "Лиджер: «налог 25 и рента 25 структурно НЕРАЗЛИМИМЫ — различие лежит в свойствах F (compulsory/unrequited vs claim), вне ядра». Тождество не опровергнуто — оно ВЫНЕСЕНО ЗА ЯДРО. Опровергнуто другое: произвольность изъятия (X≤R_true). Корректная строка: «⚠️ неразличимы структурой (R20-T3); различие — F-свойства, вне ядра; тождество UNRESOLVED»."
+  },
+  {
+   "id": "F2",
+   "claim": "V7.0 Часть IV: «S входит в ядро (R33)»",
+   "expected": "R32",
+   "actual": "DRIFT",
+   "source": "r32 ledger + V7.0 Часть II (R33: ОТКРЫТО)",
+   "verdict": "DRIFT",
+   "note": "S вошла в ядро как сомножитель — находка R32; R33 — открытый вопрос её эндогенности. Атрибуция сдвинута на один узел."
+  },
+  {
+   "id": "F3",
+   "claim": "V7.0 Часть IV: «Государство = картель → R36»",
+   "expected": "R37",
+   "actual": "DRIFT",
+   "source": "V7.0 Часть II (R36=картель, R37=государство)",
+   "verdict": "DRIFT",
+   "note": "Перекрёстная ссылка указывает на соседний узел."
+  },
+  {
+   "id": "F4",
+   "claim": "V7.0 Часть IV: «закрытые бюджеты → R35-гипотеза»",
+   "expected": "R39",
+   "actual": "DRIFT",
+   "source": "V7.0 Часть II (R39=информационная асимметрия)",
+   "verdict": "DRIFT",
+   "note": "Частота закрытых потоков — вопрос R28→R39, не R35 (налог)."
+  },
+  {
+   "id": "F5",
+   "claim": "Карантин: 18.15%, 25-е ребро, доля секретных бюджетов — держатся вне посылок",
+   "expected": "COMPLIANT",
+   "actual": "COMPLIANT",
+   "source": "V7.0 Часть IV (структура карантина воспроизведена)",
+   "verdict": "COMPLIANT",
+   "note": "Ровно тот класс честности, которого требовал пользователь: UNKNOWN не превращён в FALSE и в TRUE."
+  }
+ ],
+ "summary": {
+  "MATCH": 28,
+  "MISMATCH": 2,
+  "DRIFT": 4,
+  "COMPLIANT": 1,
+  "UNVERIFIABLE": 0
+ }
+}

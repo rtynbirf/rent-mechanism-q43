@@ -1,0 +1,587 @@
+{
+  "package": "R46-e",
+  "task": "consolidation of core v2",
+  "core_v1": {
+    "state": "Q43=(S,Ah,X,F,B,C,N,G,W,P,M,I)",
+    "channels": "K={K_f,K_w,K_s,K_t}",
+    "value": "V_t = sum_s E[R_s]/(1+r)^s * Prob(survival cumulative)",
+    "rent_anchor": "R_t = max(0, Y_t - Y_t^fe) (Gordon dissipation)",
+    "predictors": "FR1..FR5 (r44e); FR6 added by M1 below",
+    "elements_legend": {
+      "K1": "cap closing the carrier set (numeric/structural; Q43.N)",
+      "K2": "enforced exclusion against outsiders (Q43.C)",
+      "K3": "separability of the place from the holder (K_t arm)",
+      "K4": "capitalization / collateral (Q43.P as collateral)",
+      "K5": "political reproduction of the act (Q43.W)",
+      "K6": "registry of carriers (Q43.G); K6* = registry FUNCTION carried privately"
+    }
+  },
+  "constraints": "sandbox only; no web; upload/346543564356.txt not opened; no tokens; all numbers from local files (r44a/r44b/r44c/r44d/r45 findings, r44e_results.json, r44e_q42_formalization.py); missing -> UNKNOWN",
+  "M1_fr6_shock_typing": {
+    "module": "M1 FR6-conditional (shock typing)",
+    "regime": {
+      "model": "REGIME: E[R_s|post] = kappa*E[R_s|pre] for all s>=t*; survival term re-priced x lambda",
+      "kappa_flow_survival": 0.7262,
+      "sim": {
+        "V_pre": 7.012,
+        "V_post_flow_shift_only": 5.092,
+        "dV_flow_shift_only": -0.274,
+        "lambda_survival_implied": 0.1515,
+        "V_post_full": 0.112,
+        "dV_full": -0.984,
+        "note": "V overshoots the persistent spot-flow decline because BOTH terms move: the mean of the distribution AND its political survival (debt overhang: 66% of 2019 transfers were foreclosures, >950 bankruptcies, OAG $810M claim - r44c s3/s2)."
+      },
+      "calibration": {
+        "P_peak_usd": 1000000,
+        "P_peak_range": "$1.0-1.3M (2013-14)",
+        "P_trough_usd": 110000,
+        "P_trough_alt_usd": 80000,
+        "dV_obs": -0.89,
+        "F_spot_persistent": {
+          "trips_per_day_2010_11": 463701,
+          "trips_per_day_2016_11": 336737
+        },
+        "F_transient_excluded": "COVID rides -97% (04.2020, r44c timeline) - recovered, recurring-type, excluded from regime measure",
+        "flow_partial_survival": [
+          "farebox ~$7,080/mes + $1,133 tips (mrp1p 09-10.2021, r44c s5)",
+          "CY2023: 33,313,697 trips, farebox $919,766,416 (OFS23 via r44b)"
+        ],
+        "debt_overhang": "OAG 20.02.2020: medallion price 'could not be supported or paid out of taxi income' = structural debt_service > rent_flow (r44c s2)",
+        "dF_spot_persistent": -0.274
+      },
+      "check_regime_dV_gt_dFspot": true,
+      "src": [
+        "r44c_findings.md s5/s2/s3",
+        "r44d_findings.md iv-1",
+        "r44b_findings.md NYC table"
+      ]
+    },
+    "recurring": {
+      "model": "RECURRING: E[R] = mean over stationary states (drought/deluge/normal); realized dips already priced",
+      "sim": {
+        "E_R_stationary": 1.0675,
+        "V_steady": 9.038,
+        "dV_after_realized_drought": 0.0,
+        "realized_spot_drought": -0.95,
+        "realized_spot_deluge": 1.4,
+        "note": "a realized -95% spot draw moves V by exactly 0 when the state probabilities are unchanged; observed -14% is residual repricing"
+      },
+      "calibration": {
+        "F_spot_peak": 1.4,
+        "F_spot_trough": -0.95,
+        "F_spot_amplitude": 2.35,
+        "dV_obs": -0.14,
+        "policy_note": "2023 index decline coincides with SDL/buyback policy shift (r44d ii-2); still small vs spot swing"
+      },
+      "check_recurring_dV_lt_dFspot": true,
+      "src": [
+        "r44e_results.json ko6",
+        "r44d_findings.md ii-2"
+      ]
+    },
+    "synthetic": {
+      "statement": "FR6: |dV|/|dF_spot| > 1 iff regime shock; < 1 iff recurring shock",
+      "same_spot_dip": -0.3,
+      "dV_recurring": 0.0,
+      "dV_regime": -0.3,
+      "ratio_recurring": 0.0,
+      "ratio_regime": 1.0
+    },
+    "checks": {
+      "regime |dV|>|dF_spot| (NYC: 0.89 vs 0.274)": true,
+      "recurring |dV|<|dF_spot| (MDB: 0.14 vs 2.35)": true,
+      "synthetic: same dip, opposite V response": true
+    },
+    "verdict": "PASS",
+    "reframing_of_r44e_ko6": "r44e ko6 'P_gt_F_spot=false' (KO6-analog FAIL on spot measure) is RESOLVED, not refuted: MDB is a recurring-shock case, where P<F_spot is the PREDICTED direction once shock type is conditioned (FR6)."
+  },
+  "M2_donor_module": {
+    "module": "M2 donor transitions",
+    "trigger": {
+      "condition": "R_t < MAINT + APPARATUS (+ DEBT_SERVICE)",
+      "nyc_evidence": "pre-relief: debt_service > rent_flow (OAG 20.02.2020: price 'could not be supported or paid out of taxi income'); post-MRP+: payment <=$1,234/mes vs farebox ~$7,080/mes = 15-17% of rent -> gap closed (r44c s5/s8)",
+      "debeers_evidence": "stockpile cost without a price channel: lab-grown shock destroyed siteholder premium (r45)",
+      "slots_evidence": "80/20 use requirement unmeetable under COVID -> rule suspended at zero fiscal cost (r45 D2b)"
+    },
+    "donors": {
+      "D0_free_rule": {
+        "rule": "suspend the maintenance obligation itself (waiver): cost 0, W act renewed, class kept, P kept",
+        "rescue_price_usd": 0.0,
+        "W_effect": "strengthened (task spec; r45 notes K_w 'without change' - nuance kept)",
+        "class_change": false,
+        "P_effect": "preserved entirely",
+        "calibration": {
+          "case": "LHR/aviation slots COVID waiver (free rule)",
+          "facts": [
+            "IATA suspension call 02.03.2020 (Loadstar)",
+            "FAA suspended use-it-or-lose-it ~10-11.03.2020 joining EU (TPG/Simple Flying)",
+            "UK DfT legislated waiver from 26.03.2021 (GOV.UK 26.02.2021)",
+            "rent uninterrupted ('ne preryvalas ni na den', r45); slots $52.3M/pair (2008) -> record $75M/pair (08.2025)"
+          ],
+          "src": "r45_findings.md D2b row; r44e_results.json cases.LHR_slots"
+        }
+      },
+      "D4_creditor_forgiveness": {
+        "rule": "creditor writes down principal: cost = written-off principal, class kept, P re-priced down",
+        "rescue_price_usd": 350000000,
+        "W_effect": "unchanged",
+        "class_change": false,
+        "P_effect": "re-priced down -25%",
+        "calibration": {
+          "case": "NYC medallion debt, Marblegate / MRP write-off arm",
+          "facts": [
+            "Marblegate forgave $70M (09.2020, WSJ via r45)",
+            "cumulative write-offs $350M by 24.01.2023; $451M by end-2023 (OFS23 via r44b); >$471M final (council hearings 10.02.2025, r44c s4)",
+            "average write-off ~$200-229k per owner (r44c s4; r44b OFS23)",
+            "P re-priced to 0.75x pre-break: r44e sim 3c donor path 214.8 vs P0 286.5 = -25%",
+            "scale limit: holdout creditors, 'hundreds without help' (New York Focus 09.2024, r45)"
+          ],
+          "src": "r45_findings.md D4 row; r44c_findings.md s1/s4; r44b_findings.md; r44e_results.json simulations.3c"
+        }
+      },
+      "D2_taxpayer": {
+        "rule": "fiscal transfer + guarantee: cost high (grants, loss reserve, open-ended guarantee), W strengthened, class -> state-patronized",
+        "rescue_price_usd": 471000000,
+        "W_effect": "strengthened (hunger strike -> city council law; mechanism became a mayoralty obligation, r45)",
+        "class_change": true,
+        "class_to": "state-patronized (grants + guarantee + reserve)",
+        "P_effect": "not restored (program sunset 04.2024-2025)",
+        "calibration": {
+          "case": "NYC Medallion Relief Program / MRP+ 2021-23, taxpayer arm",
+          "facts": [
+            "city grants $65.7M + loss reserve $50M + P&I guarantee (r44c s4)",
+            "program total >$471M incl. creditor write-offs (r44c s4)",
+            "2,034 owners / 2,367 medallions; payment capped $1,234/mes vs farebox ~$7,080/mes = 15-17% of rent (r44c s5)",
+            "federal ARPA share UNKNOWN (r44c s4)"
+          ],
+          "src": "r45_findings.md D2a row; r44c_findings.md s4/s5"
+        }
+      },
+      "D1_own_reserves": {
+        "rule": "holder draws own reserves: buys time, but at a REAL substitute shock reserves cannot restore the price channel -> death",
+        "rescue_price_usd": 2900000000,
+        "W_effect": "shifts to states (Botswana 15%->25% claim; Angola)",
+        "class_change": true,
+        "class_to": "liquidation / residual under state control",
+        "P_effect": "asset value $4.1B -> $2.3B; sale talks ~$1B (07.2026)",
+        "calibration": {
+          "case": "De Beers 2019-2026",
+          "facts": [
+            "stockpile decision 13.11.2023, ~$2B unsold diamonds by 12.2024 (Bloomberg/Fortune via r45)",
+            "impairment $2.9B (20.02.2025); third write-down 20.02.2026: value $2.3B from $4.1B (JCK/IDEX via r45)",
+            "diamond prices century-low (TheStreet 02.04.2026); sale talks ~$1B (07.2026); largest mine closing (Daily Upside 14.07.2026)",
+            "rent NOT renewed (r45)"
+          ],
+          "src": "r45_findings.md D1 row"
+        }
+      },
+      "D3_holder_state": {
+        "rule": "donor == holder == state: costs internalized, no transition event, no restart, continuity",
+        "rescue_price_usd": null,
+        "W_effect": "continuity 100% (channel IS the state)",
+        "class_change": false,
+        "class_to": null,
+        "P_effect": "never interrupted",
+        "calibration": {
+          "case": "Russia: nomenklatura 1990-2000s",
+          "facts": [
+            "~60% of Putin elites of Soviet nomenklatura origin (Kryshtanovskaya-White lineage; exact 1996 figure UNKNOWN, r45)",
+            "2007: siloviki 26% strict / 78% broad in Kremlin (Wikipedia via r45)",
+            "K_f never interrupted; transit 1991/1999 did not break the channel (r45)"
+          ],
+          "src": "r45_findings.md D3 row"
+        }
+      }
+    },
+    "rescue_price_order_usd": {
+      "D0": 0.0,
+      "D4": 350000000,
+      "D2": 471000000,
+      "D1": 2900000000
+    },
+    "checks": {
+      "D0 < D4  ($0 < $350M write-offs)": true,
+      "D4 < D2  ($350M < $471M program total)": true,
+      "D2 < D1  ($471M < $2.9B impairment; D1 terminal = rescue FAILED)": true,
+      "D1 death reproduced (rent not renewed, mine closing)": true,
+      "D2 class change reproduced (private rent -> state-patronized)": true,
+      "D0 class preserved (slots): same private monopoly position": true,
+      "D4 class preserved (medallion stayed with owner), P -25%": true,
+      "D3 continuity (no restart)": true
+    },
+    "caveat": "Decomposition caveat (from files, kept explicit): the >$471M program total INCLUDES the D4 write-offs (creditor-funded); strictly city cash = $65.7M grants + $50M reserve + open-ended guarantee. D4<D2 additionally rests on: (i) r45 law 'rule cheaper than money'; (ii) D4 alone does not scale (holdouts, 'hundreds without help') and institutionalizes only in the D4+D2 bundle; (iii) D2 liability is open-ended and converts the class.",
+    "verdict": "PASS"
+  },
+  "M3_minset_ablation": {
+    "module": "M3 MIN-SET ablation",
+    "legend": {
+      "K1": "cap closing the carrier set (numeric/structural; Q43.N)",
+      "K2": "enforced exclusion against outsiders (Q43.C)",
+      "K3": "separability of the place from the holder (K_t arm)",
+      "K4": "capitalization / collateral (Q43.P as collateral)",
+      "K5": "political reproduction of the act (Q43.W)",
+      "K6": "registry of carriers (Q43.G); K6* = registry FUNCTION carried privately"
+    },
+    "cases": [
+      {
+        "id": "NYC_medallions",
+        "set": "training",
+        "rent_survived": true,
+        "place_price_observed": true,
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": 1,
+        "K5": 1,
+        "K6": 1,
+        "note": "cap 13,587 (Haas 1937; FHV cap 08.2018); street-hail monopoly; transfers 695/924/678/1,003 (2021-24); 25+ lenders ~$1B portfolios, avg debt ~$500-600k; MRP rulemaking + tariffs +23%; TLC registry alive; cap NEVER repealed (r44c s6)",
+        "src": "r44c s5/s6/s8; r44d iv-1; r44b NYC table"
+      },
+      {
+        "id": "Iceland_ITQ",
+        "set": "training",
+        "rent_survived": true,
+        "place_price_observed": "mechanism yes; price series UNKNOWN",
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": "UNKNOWN",
+        "K5": 1,
+        "K6": 1,
+        "note": "TAC set by regulator, shares distributed; access closed to non-owners; quotas 'bought, sold and leased' (cod market 1984, alienability 1990); system politically defended; collateral = UNKNOWN (r44b)",
+        "src": "r44b ITQ table [WITQ]; r44d i-3"
+      },
+      {
+        "id": "RF_1995",
+        "set": "training",
+        "rent_survived": "UNKNOWN",
+        "place_price_observed": "UNKNOWN",
+        "K1": "UNKNOWN",
+        "K2": "UNKNOWN",
+        "K3": "UNKNOWN",
+        "K4": "UNKNOWN",
+        "K5": "UNKNOWN",
+        "K6": "UNKNOWN",
+        "note": "named only in r44e docstring; no element data in provided files",
+        "src": "r44e_q42_formalization.py docstring"
+      },
+      {
+        "id": "NJ_wine_licences",
+        "set": "training",
+        "rent_survived": "UNKNOWN",
+        "place_price_observed": "UNKNOWN",
+        "K1": "UNKNOWN",
+        "K2": "UNKNOWN",
+        "K3": "UNKNOWN",
+        "K4": "UNKNOWN",
+        "K5": "UNKNOWN",
+        "K6": "UNKNOWN",
+        "note": "named only in r44e docstring; no element data in provided files",
+        "src": "r44e_q42_formalization.py docstring"
+      },
+      {
+        "id": "HK_taxi",
+        "set": "training",
+        "rent_survived": "UNKNOWN",
+        "place_price_observed": "UNKNOWN",
+        "K1": "UNKNOWN",
+        "K2": "UNKNOWN",
+        "K3": "UNKNOWN",
+        "K4": "UNKNOWN",
+        "K5": "UNKNOWN",
+        "K6": "UNKNOWN",
+        "note": "named only in r44e docstring; no element data in provided files",
+        "src": "r44e_q42_formalization.py docstring"
+      },
+      {
+        "id": "NZ_QMS",
+        "set": "training",
+        "rent_survived": true,
+        "place_price_observed": "quota ownership observable; price series UNKNOWN",
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": "UNKNOWN",
+        "K5": 1,
+        "K6": 1,
+        "note": "TACC cut under 2006 rebuild plan; hoki 'fully rebuilt', stocks more than doubled since 2001; 78% of quota at 10 companies (market concentration); Deepwater Group = association of quota owners; collateral UNKNOWN",
+        "src": "r44d i-1/i-2"
+      },
+      {
+        "id": "CA_dairy_quota",
+        "set": "out-of-sample",
+        "rent_survived": true,
+        "place_price_observed": true,
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": 1,
+        "K5": 1,
+        "K6": 1,
+        "note": "MSQ numeric cap since 1970 + TRQ; board sanctions; quota exchanges; quotas used as collateral (farm debt CAD 102B, ~1/3 via federal agency); FPA Act 1972, USMCA 'fundamentally intact'; CAD 30k/kg BF, CAD 35B total",
+        "src": "r44e_results.json cases.CA_dairy; r44d ii-1"
+      },
+      {
+        "id": "MDB_water",
+        "set": "out-of-sample",
+        "rent_survived": true,
+        "place_price_observed": true,
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": "partial",
+        "K5": 1,
+        "K6": 1,
+        "note": "Cap 1995 12,100 GL -> SDLs; metering/compliance; 'saw increased trade'; capitalization YES (Aither index) but credit-collateralization UNVERIFIED (ACCC 403 -> r44e 'K_f-arm UNKNOWN'); Water Act 2007 + Basin Plan; state registers",
+        "src": "r44e_results.json cases.AU_water; r44d ii-2"
+      },
+      {
+        "id": "LHR_slots",
+        "set": "out-of-sample",
+        "rent_survived": true,
+        "place_price_observed": true,
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": "partial",
+        "K5": 1,
+        "K6": 1,
+        "note": "Level-3 coordination + 80/20; coordinator enforcement; slots trade USD 27-75M; capitalization YES, collateralization undocumented in files; WSG board + DfT waiver legislation; ACL/WWACG registries",
+        "src": "r44e_results.json cases.LHR_slots"
+      },
+      {
+        "id": "Dala_dala",
+        "set": "min-set/ablation",
+        "rent_survived": true,
+        "place_price_observed": "UNKNOWN",
+        "K1": "private*",
+        "K2": "private*",
+        "K3": "UNKNOWN",
+        "K4": "UNKNOWN",
+        "K5": "partial",
+        "K6": "K6*",
+        "note": "syndicates fix tariff, collect dues, run stations; up to half of vans unlicensed (1991/1998); K6 replaced by PRIVATE carrier (syndicate registry + enforcement); LATRA allocates routes (partial state act)",
+        "src": "r44a_findings.md A1"
+      },
+      {
+        "id": "Protection_racket",
+        "set": "min-set/ablation",
+        "rent_survived": true,
+        "place_price_observed": "UNKNOWN",
+        "K1": "private*",
+        "K2": "private*",
+        "K3": "UNKNOWN",
+        "K4": "UNKNOWN",
+        "K5": 0,
+        "K6": "K6*",
+        "note": "territorial monopolies of families = private structural cap; violence+reputation = private exclusion; turf map = private registry; no state act at all (K5=0); dan/'krisha' fully stable",
+        "src": "r44a_findings.md A2"
+      },
+      {
+        "id": "Customary_land",
+        "set": "min-set/ablation",
+        "rent_survived": true,
+        "place_price_observed": "partial (discounted vs titled)",
+        "K1": "private*",
+        "K2": "private*",
+        "K3": "partial",
+        "K4": "partial",
+        "K5": "latent",
+        "K6": "K6*",
+        "note": "~90% of African land without statutory title; community recognition = oral registry (K6*); land value and transactions survive, conflicting claims, collateral DEGRADED, price discounted vs titled",
+        "src": "r44a_findings.md A3"
+      },
+      {
+        "id": "Fee_simple",
+        "set": "min-set/ablation",
+        "rent_survived": true,
+        "place_price_observed": true,
+        "K1": 1,
+        "K2": 1,
+        "K3": 1,
+        "K4": 1,
+        "K5": "latent",
+        "K6": 1,
+        "note": "estate closes the set; default enforcement (courts, recording, police) = K2; fully alienable/inheritable = K3; capitalized in land price = K4; K5 latent as state option (compulsory purchase/police power) - activation kills the place rent (B2)",
+        "src": "r44a_findings.md B1/B2"
+      },
+      {
+        "id": "Nomenklatura_USSR",
+        "set": "min-set/ablation",
+        "rent_survived": true,
+        "place_price_observed": false,
+        "K1": 1,
+        "K2": 1,
+        "K3": 0,
+        "K4": 0,
+        "K5": 1,
+        "K6": 1,
+        "note": "party approval closes the set; exclusion enforced; position legally non-transferable (K3=0) and no legal place price (K4=0); grey quasi-price (blat/purchase of appointment) UNKNOWN; party lists ARE the registry (K6=1); continuity through 1991/1999 ~60% (r45 D3)",
+        "src": "r44a_findings.md C1; r45_findings.md D3"
+      }
+    ],
+    "check_a": {
+      "check": "(a) every surviving rent>0 case has K1+K2 (state or private form)",
+      "evaluated": 11,
+      "failures": [],
+      "excluded_UNKNOWN": [
+        "RF_1995",
+        "NJ_wine_licences",
+        "HK_taxi"
+      ],
+      "rows": [
+        {
+          "case": "NYC_medallions",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "Iceland_ITQ",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "NZ_QMS",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "CA_dairy_quota",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "MDB_water",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "LHR_slots",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "Dala_dala",
+          "K1": "private*",
+          "K2": "private*",
+          "ok": true
+        },
+        {
+          "case": "Protection_racket",
+          "K1": "private*",
+          "K2": "private*",
+          "ok": true
+        },
+        {
+          "case": "Customary_land",
+          "K1": "private*",
+          "K2": "private*",
+          "ok": true
+        },
+        {
+          "case": "Fee_simple",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        },
+        {
+          "case": "Nomenklatura_USSR",
+          "K1": 1,
+          "K2": 1,
+          "ok": true
+        }
+      ],
+      "verdict": "PASS"
+    },
+    "check_b": {
+      "check": "(b) absence of K6/K5 not fatal when substituting carrier exists",
+      "rows": [
+        {
+          "case": "Dala_dala",
+          "K6": "K6*",
+          "K5": "partial",
+          "substitute": "private/communal carrier or default enforcement",
+          "rent_survived": true,
+          "ok": true
+        },
+        {
+          "case": "Protection_racket",
+          "K6": "K6*",
+          "K5": 0,
+          "substitute": "private/communal carrier or default enforcement",
+          "rent_survived": true,
+          "ok": true
+        },
+        {
+          "case": "Customary_land",
+          "K6": "K6*",
+          "K5": "latent",
+          "substitute": "private/communal carrier or default enforcement",
+          "rent_survived": true,
+          "ok": true
+        },
+        {
+          "case": "Fee_simple",
+          "K6": 1,
+          "K5": "latent",
+          "substitute": "private/communal carrier or default enforcement",
+          "rent_survived": true,
+          "ok": true
+        }
+      ],
+      "verdict": "PASS"
+    },
+    "check_c": {
+      "check": "(c) absence of K3/K4 compatible with rent but kills the OBSERVABLE place price",
+      "decisive_rows": [
+        {
+          "case": "Nomenklatura_USSR",
+          "K3": 0,
+          "K4": 0,
+          "rent_positive": true,
+          "place_price_observed": false,
+          "ok": true
+        }
+      ],
+      "supporting_rows": [
+        {
+          "case": "Customary_land",
+          "note": "K4 degraded -> price discounted vs titled"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    "hierarchy_verdict": "confirms r44a: strictly necessary K1+K2 (in any form); K6 -> registry FUNCTION (carrier may be private: K6*); K5 -> latent option for default acts; K3/K4 diagnostic (circulation and price observability, not existence). NECRO class empty (r44d iii): no case where the holder layer kills the source.",
+    "verdict": "PASS"
+  },
+  "unknown_list": [
+    "MDB: -95% spot trough is a r44e ko6 PLACEHOLDER anchored to headlines; no verified annual spot-price series locally (r44e ko6 note)",
+    "AU water: credit-collateralization of entitlements (K4/K_f arm) unverified (ACCC 403) - r44e",
+    "LHR slots: collateralization undocumented in files (capitalization confirmed by trades only)",
+    "NYC: federal ARPA share of MRP funding; 2018-22 bankruptcy year breakdown; NCUA portfolio-sale sums/discounts; public default-rate report (does not exist per Task Force); Melrose conservatorship month (Jan 2017, by memory)",
+    "NYC trough metric conflict: ~$110k (r44b, 2021 median arm's-length, TLCXLS) vs ~$80k (r44c s5, TLC transfers 09.2021) - both local, different methodology; M1 used the task-calibrated $110k",
+    "NYC: recovery share of yellow trips vs 2019 base (~96M) unverified (r44b)",
+    "Iceland ITQ: quota price series ISK/kg; lease rates; quota collateral; fiskveiðigjald 2012 parameters; price-vs-lease dynamics 2008-12/2020 (r44b)",
+    "Iceland cod SSB numbers; Dublin 2000 deregulation numbers (r44d i-4/iv-2)",
+    "NZ QMS: quota collateral (K4) - no data (r44d)",
+    "RF-1995, NJ wine licences, HK taxi: element vectors absent from provided files (names only, r44e docstring)",
+    "Dala dala / racket: K3 (alienability) and K4 (capitalization) not described (r44a)",
+    "USSR grey quasi-price of appointments (blat) unverified (r44a C1)",
+    "Negative controls: US jitney 1914-20 free entry; Zimbabwe fast-track farm-value collapse; K5-activation discount empirics (r44a)",
+    "De Beers 2019 stockpile ~$2.5B not confirmed (r45)",
+    "Kryshtanovskaya-White exact 1996 continuity figure (r45: ~60% belongs to the Putin-elites paper)",
+    "Slots: EU/UK waiver chronology by dates (r45)"
+  ],
+  "overall": {
+    "M1": "PASS",
+    "M2": "PASS",
+    "M3": "PASS",
+    "core_v2_summary": "V_t = sum E[R_s | shock model]/(1+r)^s * Prob(survival); FR6: P-vs-F amplitude is shock-type-conditional; donor law: rescue price D0 < D4 < D2 < D1, class mutates only via D2/D3; MIN-SET: {K1,K2} necessary in any form, K6/K5 functionally replaceable, K3/K4 diagnostic."
+  }
+}

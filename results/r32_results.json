@@ -1,0 +1,13 @@
+{
+  "passed": {
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "C5": true,
+    "C6": true
+  },
+  "G": 8,
+  "SCALE": 100.0,
+  "MAINT": 10.0
+}

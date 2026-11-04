@@ -1,0 +1,552 @@
+{
+ "CHK1": {
+  "NYC_MEDALLION": {
+   "K1": {
+    "present": true,
+    "ops": [
+     "N1"
+    ],
+    "best_conf": 3
+   },
+   "K2": {
+    "present": true,
+    "ops": [
+     "N3"
+    ],
+    "best_conf": 3
+   },
+   "K3": {
+    "present": true,
+    "ops": [
+     "N4",
+     "N5",
+     "N12"
+    ],
+    "best_conf": 3
+   },
+   "K4": {
+    "present": true,
+    "ops": [
+     "N6"
+    ],
+    "best_conf": 3
+   },
+   "K5": {
+    "present": true,
+    "ops": [
+     "N10",
+     "N11"
+    ],
+    "best_conf": 2
+   },
+   "K6": {
+    "present": true,
+    "ops": [
+     "N2"
+    ],
+    "best_conf": 2
+   },
+   "FLOW": {
+    "present": true,
+    "ops": [
+     "N12"
+    ],
+    "best_conf": 3
+   },
+   "PRICE": {
+    "present": true,
+    "ops": [
+     "N7",
+     "N9"
+    ],
+    "best_conf": 3
+   },
+   "LOOP": {
+    "present": true,
+    "ops": [
+     "N11"
+    ],
+    "best_conf": 2
+   },
+   "FREE": {
+    "present": true,
+    "ops": [
+     "N2"
+    ],
+    "best_conf": 2
+   }
+  },
+  "ISLAND_ITQ": {
+   "K1": {
+    "present": true,
+    "ops": [
+     "I1",
+     "I2"
+    ],
+    "best_conf": 3
+   },
+   "K2": {
+    "present": true,
+    "ops": [
+     "I4"
+    ],
+    "best_conf": 3
+   },
+   "K3": {
+    "present": true,
+    "ops": [
+     "I3",
+     "I5"
+    ],
+    "best_conf": 3
+   },
+   "K4": {
+    "present": true,
+    "ops": [
+     "I5"
+    ],
+    "best_conf": 2
+   },
+   "K5": {
+    "present": true,
+    "ops": [
+     "I7"
+    ],
+    "best_conf": 2
+   },
+   "K6": {
+    "present": true,
+    "ops": [
+     "I2",
+     "I4"
+    ],
+    "best_conf": 3
+   },
+   "FLOW": {
+    "present": true,
+    "ops": [
+     "I5",
+     "I6"
+    ],
+    "best_conf": 2
+   },
+   "PRICE": {
+    "present": true,
+    "ops": [
+     "I5"
+    ],
+    "best_conf": 2
+   },
+   "LOOP": {
+    "present": true,
+    "ops": [
+     "I8"
+    ],
+    "best_conf": 2
+   },
+   "FREE": {
+    "present": true,
+    "ops": [
+     "I2"
+    ],
+    "best_conf": 3
+   }
+  },
+  "RF_1995": {
+   "K1": {
+    "present": true,
+    "ops": [
+     "R1",
+     "R2",
+     "R3"
+    ],
+    "best_conf": 3
+   },
+   "K2": {
+    "present": true,
+    "ops": [
+     "R4"
+    ],
+    "best_conf": 2
+   },
+   "K3": {
+    "present": true,
+    "ops": [
+     "R3",
+     "R5",
+     "R8"
+    ],
+    "best_conf": 3
+   },
+   "K4": {
+    "present": true,
+    "ops": [
+     "R6"
+    ],
+    "best_conf": 3
+   },
+   "K5": {
+    "present": true,
+    "ops": [
+     "R9"
+    ],
+    "best_conf": 2
+   },
+   "K6": {
+    "present": true,
+    "ops": [
+     "R7"
+    ],
+    "best_conf": 2
+   },
+   "FLOW": {
+    "present": true,
+    "ops": [
+     "R10"
+    ],
+    "best_conf": 1
+   },
+   "PRICE": {
+    "present": true,
+    "ops": [
+     "R6"
+    ],
+    "best_conf": 3
+   },
+   "LOOP": {
+    "present": true,
+    "ops": [
+     "R8",
+     "R9"
+    ],
+    "best_conf": 3
+   },
+   "FREE": {
+    "present": true,
+    "ops": [
+     "R1",
+     "R3"
+    ],
+    "best_conf": 3
+   }
+  },
+  "NJ_LIQUOR": {
+   "K1": {
+    "present": true,
+    "ops": [
+     "L1"
+    ],
+    "best_conf": 3
+   },
+   "K2": {
+    "present": true,
+    "ops": [
+     "L3"
+    ],
+    "best_conf": 3
+   },
+   "K3": {
+    "present": true,
+    "ops": [
+     "L4"
+    ],
+    "best_conf": 2
+   },
+   "K4": {
+    "present": true,
+    "ops": [
+     "L5"
+    ],
+    "best_conf": 2
+   },
+   "K5": {
+    "present": true,
+    "ops": [
+     "L6"
+    ],
+    "best_conf": 2
+   },
+   "K6": {
+    "present": true,
+    "ops": [
+     "L2"
+    ],
+    "best_conf": 2
+   },
+   "FLOW": {
+    "present": true,
+    "ops": [
+     "L7"
+    ],
+    "best_conf": 2
+   },
+   "PRICE": {
+    "present": true,
+    "ops": [
+     "L4"
+    ],
+    "best_conf": 2
+   },
+   "LOOP": {
+    "present": true,
+    "ops": [
+     "L8"
+    ],
+    "best_conf": 2
+   },
+   "FREE": {
+    "present": true,
+    "ops": [
+     "L2"
+    ],
+    "best_conf": 2
+   }
+  },
+  "HK_TAXI": {
+   "K1": {
+    "present": true,
+    "ops": [
+     "H1"
+    ],
+    "best_conf": 2
+   },
+   "K2": {
+    "present": true,
+    "ops": [
+     "H2"
+    ],
+    "best_conf": 3
+   },
+   "K3": {
+    "present": true,
+    "ops": [
+     "H3",
+     "H4"
+    ],
+    "best_conf": 2
+   },
+   "K4": {
+    "present": true,
+    "ops": [
+     "H6"
+    ],
+    "best_conf": 2
+   },
+   "K5": {
+    "present": true,
+    "ops": [
+     "H5"
+    ],
+    "best_conf": 2
+   },
+   "K6": {
+    "present": true,
+    "ops": [
+     "H2"
+    ],
+    "best_conf": 3
+   },
+   "FLOW": {
+    "present": true,
+    "ops": [
+     "H4"
+    ],
+    "best_conf": 2
+   },
+   "PRICE": {
+    "present": true,
+    "ops": [
+     "H3",
+     "H7"
+    ],
+    "best_conf": 2
+   },
+   "LOOP": {
+    "present": true,
+    "ops": [
+     "H8"
+    ],
+    "best_conf": 2
+   },
+   "FREE": {
+    "present": true,
+    "ops": [
+     "H0"
+    ],
+    "best_conf": 1
+   }
+  },
+  "NZ_ITQ": {
+   "K1": {
+    "present": true,
+    "ops": [
+     "Z1"
+    ],
+    "best_conf": 3
+   },
+   "K2": {
+    "present": true,
+    "ops": [
+     "Z2"
+    ],
+    "best_conf": 3
+   },
+   "K3": {
+    "present": true,
+    "ops": [
+     "Z3",
+     "Z4"
+    ],
+    "best_conf": 2
+   },
+   "K4": {
+    "present": true,
+    "ops": [
+     "Z3"
+    ],
+    "best_conf": 2
+   },
+   "K5": {
+    "present": true,
+    "ops": [
+     "Z5"
+    ],
+    "best_conf": 2
+   },
+   "K6": {
+    "present": true,
+    "ops": [
+     "Z1",
+     "Z2"
+    ],
+    "best_conf": 3
+   },
+   "FLOW": {
+    "present": true,
+    "ops": [
+     "Z4"
+    ],
+    "best_conf": 2
+   },
+   "PRICE": {
+    "present": true,
+    "ops": [
+     "Z3"
+    ],
+    "best_conf": 2
+   },
+   "LOOP": {
+    "present": true,
+    "ops": [
+     "Z6"
+    ],
+    "best_conf": 2
+   },
+   "FREE": {
+    "present": true,
+    "ops": [
+     "Z1"
+    ],
+    "best_conf": 3
+   }
+  }
+ },
+ "CHK2": {
+  "LONDON_KNOWLEDGE": {
+   "LACK:K1": true,
+   "LACK:K3": true,
+   "OUT:NORENT": true
+  },
+  "OPEN_ACCESS_HERRING": {
+   "LACK:K1": true,
+   "LACK:K2": true,
+   "LACK:K3": true,
+   "LACK:K6": true,
+   "OUT:DISSIP": true
+  }
+ },
+ "CHK3": [
+  {
+   "id": "KO1",
+   "case": "NYC_MEDALLION",
+   "ops": [
+    "N8",
+    "N9"
+   ],
+   "what": "Принуждение перестало дотягиваться до платформ (заместитель вне численного слоя)",
+   "outcome": "Цена места −80%+; поток аренды сжался; норма закона не менялась",
+   "verdict": "Работающее исключение — несущее для цены и частично для потока"
+  },
+  {
+   "id": "KO2",
+   "case": "ISLAND_ITQ",
+   "ops": [
+    "I2",
+    "I3"
+   ],
+   "what": "Добавлены: отделимость места + постоянство нормы",
+   "outcome": "Стоимость долей из ~0 → $1—3 млрд",
+   "verdict": "Отделимость+постоянство создают слой капитализации"
+  },
+  {
+   "id": "KO3",
+   "case": "OPEN_ACCESS_HERRING",
+   "ops": [
+    "O1",
+    "O2"
+   ],
+   "what": "Отсутствуют: предел множества, реестр, исключение",
+   "outcome": "Рента рассеялась (коллапс 1968)",
+   "verdict": "Предел+исключение необходимы для потока"
+  },
+  {
+   "id": "KO4",
+   "case": "LONDON_KNOWLEDGE",
+   "ops": [
+    "LD1",
+    "LD4"
+   ],
+   "what": "Предел ЧИСЛА отсутствует (есть только качественный барьер)",
+   "outcome": "Цены места нет, хотя вход затруднён на годы",
+   "verdict": "Качественный барьер НЕ производит ренты места"
+  },
+  {
+   "id": "KO5",
+   "case": "RF_1995",
+   "ops": [
+    "R7"
+   ],
+   "what": "Реестр оспариваем → издержки исключения взлетают",
+   "outcome": "Рейдерские войны; часть потока рассеялась в защиту места",
+   "verdict": "Реестр — несущий: он снижает издержки исключения"
+  },
+  {
+   "id": "KO6",
+   "case": "NYC_MEDALLION",
+   "ops": [
+    "N6",
+    "N11"
+   ],
+   "what": "Кредитный слой подморожен (пандемия; долговая петля)",
+   "outcome": "Цена упала глубже потока; посменная аренда продолжалась",
+   "verdict": "Финансовое погружение — усиливающий, НЕ несущий для потока"
+  },
+  {
+   "id": "KO7",
+   "case": "HK_TAXI",
+   "ops": [
+    "H5",
+    "H7"
+   ],
+   "what": "Платформы входят; исключение манёвренное (иски вместо предела)",
+   "outcome": "Цена −40%+ от пика; арендный поток сохранён частично",
+   "verdict": "Повтор нью-йоркского исхода с меньшей амплитудой"
+  }
+ ],
+ "CHK4": {
+  "contaminations": []
+ },
+ "CHK5": {},
+ "verdict": "PASS",
+ "fails": []
+}
