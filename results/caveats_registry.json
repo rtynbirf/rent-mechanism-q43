@@ -1,0 +1,211 @@
+{
+  "registry_version": 1,
+  "generated_by": "scripts/caveat_registry.py --build (Волна ×4 · П48)",
+  "source_artifact": "results/r49_results.json",
+  "core_status_rule": "SOLVED только при caveats_open=0 (явный трекинг, не автозакрытие)",
+  "counts": {
+    "total": 22,
+    "open": 22,
+    "with_issue": 0
+  },
+  "caveats": [
+    {
+      "id": "CAV-01",
+      "class": "structurally_blocked",
+      "text": "ряды цен квот НЗ/Исландия — 3 попытки (r46b, r46d, r47b), структурно заблокированы в песочнице; playbook в r47b",
+      "source": "results/r49_results.json unknown_registry.structurally_blocked",
+      "acceptance": "Источник получен в песочнице (HTTP 200, машиночитаемый ряд сохранён в репо с URL и датой выгрузки); числа пересчитаны и дописаны в r*_results.json; issue закрывается PATCH при сходимости чисел. Пока доступ блокирован — caveat жив.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-02",
+      "class": "structurally_blocked",
+      "text": "слоты 2009–10: поправка атрибуции — $52.3M/пара = LHR 2008, не LGA; ряды CAA/FAA вне песочницы",
+      "source": "results/r49_results.json unknown_registry.structurally_blocked",
+      "acceptance": "Источник получен в песочнице (HTTP 200, машиночитаемый ряд сохранён в репо с URL и датой выгрузки); числа пересчитаны и дописаны в r*_results.json; issue закрывается PATCH при сходимости чисел. Пока доступ блокирован — caveat жив.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-03",
+      "class": "structurally_blocked",
+      "text": "даладала K3/K4: Transit-Center 404, S2 429 — источник недоступен",
+      "source": "results/r49_results.json unknown_registry.structurally_blocked",
+      "acceptance": "Источник получен в песочнице (HTTP 200, машиночитаемый ряд сохранён в репо с URL и датой выгрузки); числа пересчитаны и дописаны в r*_results.json; issue закрывается PATCH при сходимости чисел. Пока доступ блокирован — caveat жив.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-04",
+      "class": "structurally_blocked",
+      "text": "жёлтые поездки 2019 точно (factbook 404×3); оценка 95–105M LOW; F-амплитуда 2014→2018–19 ≈ −40…50%",
+      "source": "results/r49_results.json unknown_registry.structurally_blocked",
+      "acceptance": "Источник получен в песочнице (HTTP 200, машиночитаемый ряд сохранён в репо с URL и датой выгрузки); числа пересчитаны и дописаны в r*_results.json; issue закрывается PATCH при сходимости чисел. Пока доступ блокирован — caveat жив.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-05",
+      "class": "structurally_blocked",
+      "text": "AU water: credit-collateralization of entitlements (K4/K_f arm) unverified (ACCC 403) - r44e",
+      "source": "results/r49_results.json unknown_registry.structurally_blocked",
+      "acceptance": "Источник получен в песочнице (HTTP 200, машиночитаемый ряд сохранён в репо с URL и датой выгрузки); числа пересчитаны и дописаны в r*_results.json; issue закрывается PATCH при сходимости чисел. Пока доступ блокирован — caveat жив.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-06",
+      "class": "methodologically_closed",
+      "text": "MDB: -95% spot trough is a r44e ko6 PLACEHOLDER anchored to headlines; no verified annual spot-price series locally (r44e ko6 note)",
+      "source": "results/r49_results.json unknown_registry.methodologically_closed",
+      "acceptance": "Правило сформулировано и внесено дельтой канона (реестр E1–E14 программы); правило применено к уже сохранённым артефактам, результат в r*_results.json; issue закрывается коммитом дельты со ссылкой на прогон.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-07",
+      "class": "methodologically_closed",
+      "text": "NYC: federal ARPA share of MRP funding; 2018-22 bankruptcy year breakdown; NCUA portfolio-sale sums/discounts; public default-rate report (does not exist per Task Force); Melrose conservatorship month (Jan 2017, by memory)",
+      "source": "results/r49_results.json unknown_registry.methodologically_closed",
+      "acceptance": "Правило сформулировано и внесено дельтой канона (реестр E1–E14 программы); правило применено к уже сохранённым артефактам, результат в r*_results.json; issue закрывается коммитом дельты со ссылкой на прогон.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-08",
+      "class": "methodologically_closed",
+      "text": "De Beers 2019 stockpile ~$2.5B not confirmed (r45)",
+      "source": "results/r49_results.json unknown_registry.methodologically_closed",
+      "acceptance": "Правило сформулировано и внесено дельтой канона (реестр E1–E14 программы); правило применено к уже сохранённым артефактам, результат в r*_results.json; issue закрывается коммитом дельты со ссылкой на прогон.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-09",
+      "class": "open",
+      "text": "слоты 9/11–2004: цены сделок не документированы (waiver документирован, P-амплитуда UNKNOWN)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-10",
+      "class": "open",
+      "text": "джитни: цена лицензии после удушения — не возникла/не документирована (отрасль схлопнулась до капитализации)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-11",
+      "class": "open",
+      "text": "LHR slots: collateralization undocumented in files (capitalization confirmed by trades only)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-12",
+      "class": "open",
+      "text": "NYC trough metric conflict: ~$110k (r44b, 2021 median arm's-length, TLCXLS) vs ~$80k (r44c s5, TLC transfers 09.2021) - both local, different methodology; M1 used the task-calibrated $110k",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-13",
+      "class": "open",
+      "text": "NYC: recovery share of yellow trips vs 2019 base (~96M) unverified (r44b)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-14",
+      "class": "open",
+      "text": "Iceland ITQ: quota price series ISK/kg; lease rates; quota collateral; fiskveiðigjald 2012 parameters; price-vs-lease dynamics 2008-12/2020 (r44b)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-15",
+      "class": "open",
+      "text": "Iceland cod SSB numbers; Dublin 2000 deregulation numbers (r44d i-4/iv-2)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-16",
+      "class": "open",
+      "text": "NZ QMS: quota collateral (K4) - no data (r44d)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-17",
+      "class": "open",
+      "text": "RF-1995, NJ wine licences, HK taxi: element vectors absent from provided files (names only, r44e docstring)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-18",
+      "class": "open",
+      "text": "Dala dala / racket: K3 (alienability) and K4 (capitalization) not described (r44a)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-19",
+      "class": "open",
+      "text": "USSR grey quasi-price of appointments (blat) unverified (r44a C1)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-20",
+      "class": "open",
+      "text": "Negative controls: US jitney 1914-20 free entry; Zimbabwe fast-track farm-value collapse; K5-activation discount empirics (r44a)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-21",
+      "class": "open",
+      "text": "Kryshtanovskaya-White exact 1996 continuity figure (r45: ~60% belongs to the Putin-elites paper)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    },
+    {
+      "id": "CAV-22",
+      "class": "open",
+      "text": "Slots: EU/UK waiver chronology by dates (r45)",
+      "source": "results/r49_results.json unknown_registry.open",
+      "acceptance": "Найден и сохранён первичный источник (файл в репо + URL + дата выгрузки); затронутые числа пересчитаны; прогон дописан в r*_results.json; issue закрывается при согласовании с реестром. Не найдено — caveat остаётся, UNKNOWN ≠ FALSE.",
+      "issue": null,
+      "state": "open"
+    }
+  ]
+}

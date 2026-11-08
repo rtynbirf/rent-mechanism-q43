@@ -3,6 +3,8 @@
 **Статус: SOLVED_WITH_CAVEATS.** Ядро Q43 v2, шесть законов L1–L6, инвариант I_K″.
 Метод: реальность → наблюдаемые элементы → связи → операции → воспроизводство → механизм → формализация. Протокол HYPOTHESIS → TASK GRAPH → EVIDENCE → ATTACK → UPDATE. **UNKNOWN ≠ FALSE.**
 
+**Реестр caveats (Волна ×4 · П48):** каждый caveat = запись с формулой приёмки — `docs/CAVEATS.md` + `results/caveats_registry.json` (22 записи, счётчик машиносчётом: `python3 scripts/caveat_registry.py check`). Ядро → SOLVED только при caveats_open=0; явный трекинг долга вместо автозакрытия.
+
 ---
 
 ## Структура

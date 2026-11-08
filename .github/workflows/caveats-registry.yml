@@ -1,0 +1,39 @@
+name: caveats-registry (реестр caveats Q43)
+
+# Волна ×4 · П48 (issue #2): каждый caveat = запись реестра с приёмкой.
+# Счётчики сходятся; статус SOLVED только при caveats_open=0;
+# живая сверка search is:open label:caveat (GITHUB_TOKEN из CI).
+
+on:
+  push:
+    paths:
+      - "scripts/caveat_registry.py"
+      - "results/caveats_registry.json"
+      - "docs/CAVEATS.md"
+      - ".github/workflows/caveats-registry.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Самоиспытание логики реестра
+        run: python3 scripts/caveat_registry.py --selftest
+      - name: Приёмка: числа сходятся (+ живая сверка label:caveat)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/caveat_registry.py check --live
+      - name: Двойная генерация docs идентична
+        run: |
+          cp docs/CAVEATS.md /tmp/before.md
+          python3 scripts/caveat_registry.py docs
+          diff -q /tmp/before.md docs/CAVEATS.md
+          echo "двойная генерация идентична"
