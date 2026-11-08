@@ -1,0 +1,35 @@
+# rent-mechanism-q43
+> Рентный механизм: ядро Q43 v2, шесть законов L1-L6, инвариант I_K. Машинная программа R11-R49 (наблюдение -> атака -> патч).
+
+Автоген 2026-11-08 · источник: живой GitHub API (номера и файлы не руками) · владелец rtynbirf · ветка `main`
+
+## Мембрана
+- README.md — для человека (РЕНТНЫЙ МЕХАНИЗМ — ПРОГРАММА R11–R49)
+- AGENTS.md — есть
+- LICENSE — CC-BY-4.0
+- topics: analysis, canon, debt, economics, research, research-verification, sovereignty
+
+## Карта корня
+- .github/
+- .gitignore
+- AGENTS.md
+- CODEOWNERS
+- CONTRIBUTING.md
+- LICENSE
+- PULSE.md
+- README.md
+- SECURITY.md
+- docs/
+- findings/
+- results/
+- scripts/
+- worklog.md
+
+## CI
+- workflow: guardian-tripwire
+- workflow: self-audit
+
+## Ссылки
+- [GitHub](https://github.com/rtynbirf/rent-mechanism-q43)
+- [README](https://github.com/rtynbirf/rent-mechanism-q43/blob/main/README.md)
+- [raw llms.txt](https://raw.githubusercontent.com/rtynbirf/rent-mechanism-q43/main/llms.txt)
