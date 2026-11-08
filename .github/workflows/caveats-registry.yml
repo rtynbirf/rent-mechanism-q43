@@ -27,7 +27,7 @@ jobs:
           python-version: '3.12'
       - name: Самоиспытание логики реестра
         run: python3 scripts/caveat_registry.py --selftest
-      - name: Приёмка: числа сходятся (+ живая сверка label:caveat)
+      - name: "Приёмка: числа сходятся (+ живая сверка label:caveat)"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/caveat_registry.py check --live
