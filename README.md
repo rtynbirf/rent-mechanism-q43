@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="banner.png" alt="rent-mechanism-q43 — Ядро Q43 v2: шесть законов L1–L6, инварианты" width="100%">
+</div>
+
 # РЕНТНЫЙ МЕХАНИЗМ — ПРОГРАММА R11–R49
 
 **Статус: SOLVED_WITH_CAVEATS.** Ядро Q43 v2, шесть законов L1–L6, инвариант I_K″.
