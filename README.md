@@ -24,6 +24,18 @@
 
 # rent-mechanism-q43
 
+<div align="center">
+
+<a href="https://github.com/rtynbirf/rent-mechanism-q43"><img src="banner.png" width="100%" alt="rent-mechanism-q43 — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+
+
+
+
+# rent-mechanism-q43
+
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/rent-mechanism-q43@main/.github/social-preview.png" alt="rent-mechanism-q43" width="100%"></p>
 
 <div align="center">
