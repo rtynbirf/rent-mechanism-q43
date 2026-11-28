@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/rent-mechanism-q43@main/banner.png" alt="rent-mechanism-q43 — Ядро Q43 v2: шесть законов L1–L6, инварианты" width="100%">
+
+<a href="https://github.com/rtynbirf/rent-mechanism-q43"><img src="banner.png" width="100%" alt="rent-mechanism-q43 — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
 </div>
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
@@ -12,13 +14,25 @@
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/rent-mechanism-q43@main/revo-page.svg" width="100%" alt="РЕВО-паспорт страницы rent-mechanism-q43: строение файлов, лексикон, числа — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы rent-mechanism-q43 №49 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 93 | 6 | 58 | 2026-11-18 | 1 |
+| 103 | 8 | 1 | 2026-11-28 | 1 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# rent-mechanism-q43
+
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/rent-mechanism-q43@main/.github/social-preview.png" alt="rent-mechanism-q43" width="100%"></p>
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/rent-mechanism-q43@main/banner.png" alt="rent-mechanism-q43 — Ядро Q43 v2: шесть законов L1–L6, инварианты" width="100%">
+</div>
+
+
+
+
 
 
 
